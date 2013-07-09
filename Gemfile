@@ -43,3 +43,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# All lines below are custom - Jai
+gem 'haml-rails'
+gem 'foreigner'
