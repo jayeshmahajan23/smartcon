@@ -1,0 +1,87 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_time: 2013-07-08 22:12:21
+  end_time: 2013-07-08 22:12:21
+  cstatus: MyString
+  ctype: MyString
+  name: MyString
+  headine: MyString
+  banner_path: MyString
+  background_path: MyString
+  theme_id: 1
+  only_follwers: false
+  owner_screen_name: MyString
+  owner_twitter_token: MyString
+  owner_twitter_secret: MyString
+  owner_facebook_id: MyString
+  owner_facebook_token: MyString
+  owner_facebook_secret: MyString
+  min_followers_count: 1
+  min_twitter_start_date: 2013-07-08 22:12:21
+  min_status_count: 1
+  message_to_tweet: MyString
+  message_to_fb: MyString
+  tweet_required: false
+  fb_required: false
+  max_entries: 1
+  accept_multiple: MyString
+  rules: MyString
+  timezone: MyString
+  prize_worth: 1.5
+  prize_currency: MyString
+  prize_detail: MyString
+  language: MyString
+  show_winners: false
+  show_winner_answer: false
+  over_message: MyString
+  send_email_to: MyString
+  completion_msg: MyString
+  organization_id: 
+  user_id: 1
+  deleted_user_name: MyString
+  theme_id: 
+  answer_filter: MyString
+
+two:
+  start_time: 2013-07-08 22:12:21
+  end_time: 2013-07-08 22:12:21
+  cstatus: MyString
+  ctype: MyString
+  name: MyString
+  headine: MyString
+  banner_path: MyString
+  background_path: MyString
+  theme_id: 1
+  only_follwers: false
+  owner_screen_name: MyString
+  owner_twitter_token: MyString
+  owner_twitter_secret: MyString
+  owner_facebook_id: MyString
+  owner_facebook_token: MyString
+  owner_facebook_secret: MyString
+  min_followers_count: 1
+  min_twitter_start_date: 2013-07-08 22:12:21
+  min_status_count: 1
+  message_to_tweet: MyString
+  message_to_fb: MyString
+  tweet_required: false
+  fb_required: false
+  max_entries: 1
+  accept_multiple: MyString
+  rules: MyString
+  timezone: MyString
+  prize_worth: 1.5
+  prize_currency: MyString
+  prize_detail: MyString
+  language: MyString
+  show_winners: false
+  show_winner_answer: false
+  over_message: MyString
+  send_email_to: MyString
+  completion_msg: MyString
+  organization_id: 
+  user_id: 1
+  deleted_user_name: MyString
+  theme_id: 
+  answer_filter: MyString

@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  question: MyString
+  qorder: 1
+  qtype: MyString
+  must_answer: false
+  ans_1: MyString
+  ans_2: MyString
+  ans_3: MyString
+  ans_4: MyString
+  ans_5: MyString
+  ans_6: MyString
+  ans_7: MyString
+  ans_8: MyString
+  ans_9: MyString
+  ans_10: MyString
+  contest_id: 
+
+two:
+  question: MyString
+  qorder: 1
+  qtype: MyString
+  must_answer: false
+  ans_1: MyString
+  ans_2: MyString
+  ans_3: MyString
+  ans_4: MyString
+  ans_5: MyString
+  ans_6: MyString
+  ans_7: MyString
+  ans_8: MyString
+  ans_9: MyString
+  ans_10: MyString
+  contest_id: 

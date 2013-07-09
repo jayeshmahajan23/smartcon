@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  folder: MyString
+  organization_id: 1
+  tstatus: MyString
+  ttype: MyString
+
+two:
+  name: MyString
+  folder: MyString
+  organization_id: 1
+  tstatus: MyString
+  ttype: MyString

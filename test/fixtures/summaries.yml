@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  views: 1
+  pcount: 1
+  time_at: 2013-07-08 22:13:01
+  contest_id: 
+
+two:
+  views: 1
+  pcount: 1
+  time_at: 2013-07-08 22:13:01
+  contest_id: 

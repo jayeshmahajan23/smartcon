@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  code: MyString
+  organization_id: 1
+  comment: MyString
+  ctype: MyString
+  expire_at: 2013-07-08 22:13:15
+  discount_method: MyString
+
+two:
+  code: MyString
+  organization_id: 1
+  comment: MyString
+  ctype: MyString
+  expire_at: 2013-07-08 22:13:15
+  discount_method: MyString

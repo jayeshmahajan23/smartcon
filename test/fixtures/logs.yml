@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  some_id: 1
+  ltype: MyString
+  detail: MyString
+  ip_address: MyString
+  user_id: 
+
+two:
+  some_id: 1
+  ltype: MyString
+  detail: MyString
+  ip_address: MyString
+  user_id: 

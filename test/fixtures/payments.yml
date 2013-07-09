@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  amount_paid: 1.5
+  plan_id: 1
+  quantity: 1
+  amount_returned: 1.5
+  total_to_pay: 1.5
+  discount: 1.5
+  gateway_id: MyString
+  payment_meta_data: MyString
+  comment: MyString
+  pstatus: MyString
+  organization_id: 
+  coupon_id: 
+
+two:
+  amount_paid: 1.5
+  plan_id: 1
+  quantity: 1
+  amount_returned: 1.5
+  total_to_pay: 1.5
+  discount: 1.5
+  gateway_id: MyString
+  payment_meta_data: MyString
+  comment: MyString
+  pstatus: MyString
+  organization_id: 
+  coupon_id: 

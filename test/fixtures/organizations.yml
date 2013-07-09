@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  country: MyString
+  otype: MyString
+  ostatus: MyString
+  premium_contest_count: 1
+  sub_premium_contest_count: 1
+  subscription_starts_at: 2013-07-08 22:11:29
+  subscription_expires_at: 2013-07-08 22:11:29
+  subscription_id: 
+
+two:
+  name: MyString
+  country: MyString
+  otype: MyString
+  ostatus: MyString
+  premium_contest_count: 1
+  sub_premium_contest_count: 1
+  subscription_starts_at: 2013-07-08 22:11:29
+  subscription_expires_at: 2013-07-08 22:11:29
+  subscription_id: 

@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  contest_id: 1
+  twitter_user_id: 1
+  ip: MyString
+  country: MyString
+  state: MyString
+  browser: MyString
+  num_of_q_answered: 1
+  has_tweeted: false
+  posted_on_fb: false
+  pstatus: MyString
+  is_winner: false
+  winner_tag: MyString
+  winner_note: MyString
+  winner_at: 2013-07-08 22:12:26
+  twitter_user_id: 
+  contest_id: 
+  referrer: MyString
+  multiple_entered: false
+
+two:
+  contest_id: 1
+  twitter_user_id: 1
+  ip: MyString
+  country: MyString
+  state: MyString
+  browser: MyString
+  num_of_q_answered: 1
+  has_tweeted: false
+  posted_on_fb: false
+  pstatus: MyString
+  is_winner: false
+  winner_tag: MyString
+  winner_note: MyString
+  winner_at: 2013-07-08 22:12:26
+  twitter_user_id: 
+  contest_id: 
+  referrer: MyString
+  multiple_entered: false
