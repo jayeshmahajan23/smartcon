@@ -1,0 +1,63 @@
+Final scaffold strings only for models
+-----------------------------------------------------
+
+rails generate model Subscription name:string detail:string amount:float sstatus:string stype:string
+
+rails generate model Organization name:string country:string otype:string ostatus:string premium_contest_count:integer sub_premium_contest_count:integer subscription_starts_at:datetime subscription_expires_at:datetime subscription:references
+
+rails generate model User name:string email:string password:string utype:string ustatus:string last_login_ip:string last_login_at:datetime organization:references
+
+rails generate model Twitter_user screen_name:string num_of_followers:integer num_of_followings:integer num_of_statuses:integer twitter_start_date:datetime avatar_url:string twitter_visibiity:string facebook_name:string update_it:boolean klout_score:integer socont_score:integer
+
+rails generate model Theme name:string folder:string organization_id:integer tstatus:string ttype:string
+
+rails generate model Contest start_time:datetime end_time:datetime cstatus:string ctype:string name:string headine:string banner_path:string background_path:string theme_id:integer only_follwers:boolean owner_screen_name:string owner_twitter_token:string owner_twitter_secret:string owner_facebook_id:string owner_facebook_token:string owner_facebook_secret:string min_followers_count:integer min_twitter_start_date:datetime min_status_count:integer message_to_tweet:string message_to_fb:string tweet_required:boolean fb_required:boolean max_entries:integer accept_multiple:string rules:string timezone:string prize_worth:float prize_currency:string prize_detail:string language:string show_winners:boolean show_winner_answer:boolean over_message:string send_email_to:string completion_msg:string organization:references user_id:integer deleted_user_name:string theme:references answer_filter:string
+
+rails generate model Participant contest_id:integer twitter_user_id:integer ip:string country:string state:string browser:string num_of_q_answered:integer has_tweeted:boolean posted_on_fb:boolean pstatus:string is_winner:boolean winner_tag:string winner_note:string winner_at:datetime twitter_user:references contest:references referrer:string multiple_entered:boolean
+
+rails generate model Question question:string qorder:integer qtype:string must_answer:boolean ans_1:string ans_2:string ans_3:string ans_4:string ans_5:string ans_6:string ans_7:string ans_8:string ans_9:string ans_10:string contest:references
+
+rails generate model Answer answers:string participant:references question:references
+
+rails generate model Update message:string utype:string contest:references
+
+rails generate model Summary views:integer pcount:integer time_at:datetime contest:references
+
+rails generate model Log some_id:integer ltype:string detail:string ip_address:string user:references
+
+rails generate model Coupon code:string organization_id:integer comment:string ctype:string expire_at:datetime discount_method:string
+
+rails generate model Payment amount_paid:float plan_id:integer quantity:integer amount_returned:float total_to_pay:float discount:float gateway_id:string payment_meta_data:string comment:string pstatus:string organization:references coupon:references
+
+
+===========
+rails generate controller Subscription  <<-- only to create controller
+rails generate scaffold_controller Subscription  <<-- to create controller and views
+rails generate model Subscription <<-- to create only controller
+
+
+In contest table,
+accept_multiple:boolean
+prize_detail:text
+over_message:text
+answer_filter:text
+
+In Question table,
+make all ans_x as text
+
+In Answer table,
+rename answers column to answer
+answer:text
+
+In Update table,
+message:text
+
+
+
+
+
+
+
+
+
+

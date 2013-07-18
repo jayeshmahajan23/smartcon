@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  screen_name: MyString
+  num_of_followers: 1
+  num_of_followings: 1
+  num_of_statuses: 1
+  twitter_start_date: 2013-07-08 22:12:08
+  avatar_url: MyString
+  twitter_visibiity: MyString
+  facebook_name: MyString
+  update_it: false
+  klout_score: 1
+  socont_score: 1
+
+two:
+  screen_name: MyString
+  num_of_followers: 1
+  num_of_followings: 1
+  num_of_statuses: 1
+  twitter_start_date: 2013-07-08 22:12:08
+  avatar_url: MyString
+  twitter_visibiity: MyString
+  facebook_name: MyString
+  update_it: false
+  klout_score: 1
+  socont_score: 1

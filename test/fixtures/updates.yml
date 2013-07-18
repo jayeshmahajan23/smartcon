@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  message: MyString
+  utype: MyString
+  contest_id: 
+
+two:
+  message: MyString
+  utype: MyString
+  contest_id: 
