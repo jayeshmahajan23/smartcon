@@ -21,7 +21,7 @@ rails generate model Answer answers:string participant:references question:refer
 
 rails generate model Update message:string utype:string contest:references
 
-rails generate model Summary views:integer pcount:integer time_at:datetime contest:references 
+rails generate model Summary views:integer pcount:integer time_at:datetime contest:references
 
 rails generate model Log some_id:integer ltype:string detail:string ip_address:string user:references
 
@@ -36,8 +36,28 @@ rails generate scaffold_controller Subscription  <<-- to create controller and v
 rails generate model Subscription <<-- to create only controller
 
 
+In contest table,
+accept_multiple:boolean
+prize_detail:text
+over_message:text
+answer_filter:text
+
+In Question table,
+make all ans_x as text
+
+In Answer table,
+rename answers column to answer
+answer:text
+
+In Update table,
+message:text
 
 
- 
+
+
+
+
+
+
 
 

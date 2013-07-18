@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130709051321) do
+ActiveRecord::Schema.define(version: 20130718032017) do
 
   create_table "answers", force: true do |t|
-    t.string   "answers"
+    t.text     "answer",         limit: 255
     t.integer  "participant_id"
     t.integer  "question_id"
     t.datetime "created_at"
@@ -49,22 +49,22 @@ ActiveRecord::Schema.define(version: 20130709051321) do
     t.boolean  "tweet_required"
     t.boolean  "fb_required"
     t.integer  "max_entries"
-    t.string   "accept_multiple"
+    t.boolean  "accept_multiple",        limit: 255
     t.string   "rules"
     t.string   "timezone"
     t.float    "prize_worth"
     t.string   "prize_currency"
-    t.string   "prize_detail"
+    t.text     "prize_detail",           limit: 255
     t.string   "language"
     t.boolean  "show_winners"
     t.boolean  "show_winner_answer"
-    t.string   "over_message"
+    t.text     "over_message",           limit: 255
     t.string   "send_email_to"
     t.string   "completion_msg"
     t.integer  "organization_id"
     t.integer  "user_id"
     t.string   "deleted_user_name"
-    t.string   "answer_filter"
+    t.text     "answer_filter",          limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -160,16 +160,16 @@ ActiveRecord::Schema.define(version: 20130709051321) do
     t.integer  "qorder"
     t.string   "qtype"
     t.boolean  "must_answer"
-    t.string   "ans_1"
-    t.string   "ans_2"
-    t.string   "ans_3"
-    t.string   "ans_4"
-    t.string   "ans_5"
-    t.string   "ans_6"
-    t.string   "ans_7"
-    t.string   "ans_8"
-    t.string   "ans_9"
-    t.string   "ans_10"
+    t.text     "ans_1",       limit: 255
+    t.text     "ans_2",       limit: 255
+    t.text     "ans_3",       limit: 255
+    t.text     "ans_4",       limit: 255
+    t.text     "ans_5",       limit: 255
+    t.text     "ans_6",       limit: 255
+    t.text     "ans_7",       limit: 255
+    t.text     "ans_8",       limit: 255
+    t.text     "ans_9",       limit: 255
+    t.text     "ans_10",      limit: 255
     t.integer  "contest_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -225,7 +225,7 @@ ActiveRecord::Schema.define(version: 20130709051321) do
   end
 
   create_table "updates", force: true do |t|
-    t.string   "message"
+    t.text     "message",    limit: 255
     t.string   "utype"
     t.integer  "contest_id"
     t.datetime "created_at"
