@@ -1,6 +1,9 @@
 Smartcon::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  get 'signup' => 'signups#new'
+  # post 'signup' => 'signups#create'
+  post 'signup', :to=>"signups#create", :as=>"signups"
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
@@ -39,7 +42,7 @@ Smartcon::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

@@ -1,0 +1,7 @@
+- if target.errors.any?
+  .fail_alert.secondary_text
+    %strong
+      = t :default_error_header
+    %ul
+      - target.errors.full_messages.each do |msg|
+        %li= msg

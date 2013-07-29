@@ -1,0 +1,287 @@
+$site_text_color: #868686;
+$site_font_size: 14px;
+$site_font_size_secondary: 12px;
+$site_font: Century Gothic, Trebuchet MS, Helvetica;
+
+/* Buttons */
+$button_dark_bg_color: #00CCFF;
+$button_light_bg_color: #80E6FF;
+$button_text_color: #FFFFFF;
+$button_font: Century Gothic, Trebuchet MS, Helvetica;
+$button_text_shadow: 0px -1px #808080;
+
+$light_gray_0: #C0C0C0;  /* Darkest Used for input filed border */
+$light_gray_1: #F2F2F2; /* Darker used for table header and hr line and box border, if any*/
+$light_gray_2: #F7F7F7; /* Used in table alternate row and box bg color, if any*/
+$dark_yellow: #FEEF20;
+$light_yellow: #FFF916;
+
+/* Anchor */
+$anchor_color: #00CCFF;
+$anchor_hover_color: #07A6FC;
+
+/* Alert box */
+$alert_box_header_bg_color: #FEEF20;
+$fail_text_color: #B94A48;
+$warning_text_color: #C09853;
+$success_text_color: #468847;
+$alert_padding: 8px 35px 8px 14px;
+
+/* Set height and width of form fields */
+$input_width: 300px;
+$input_height: 30px;
+$input_text_size: 14px;
+$input_placeholder_text_size: 13px;
+$input_border: 1px solid $light_gray_0;
+$input_padding: 0px 0px 0px 4px;
+
+/* Mixin for alert boxes*/
+@mixin alert_box($txt_color) {
+  margin-top: 10px;
+  padding: $alert_padding;
+  color: $txt_color;
+  background: lighten($txt_color, 42);
+  border: 1px solid lighten($txt_color, 32);
+  display: inline-block
+}
+
+/* Set mixin for border radius */
+@mixin border_radius($radius: 4px) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+/* Set mixin for opacity style */
+@mixin set_opacity($trans:1) {
+  filter: alpha(opactiy=($trans * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
+}
+
+/* Set box shadow*/
+@mixin set_box_shadow($xoffset:3px,$yoffset:2px,$opacity:4px,$color:#cacaca) {
+  -webkit-box-shadow: $xoffset $yoffset $opacity $color;
+  -moz-box-shadow: $xoffset $yoffset $opacity $color;
+  box-shadow: $xoffset $yoffset $opacity $color;
+}
+
+/* Set apperance */
+@mixin set_apperance {
+  -webkit-appearance: menulist-button;
+  -moz-appearance: menulist-button;
+  -o-appearance: menulist-button;
+  -ms-appearance: menulist-button;
+  appearance: menulist-button;
+}
+
+/* Set anchor tag style*/
+a {
+  color: $anchor_color;
+  text-decoration: none;
+  &:hover {
+    color: $anchor_hover_color;
+  }
+}
+
+/* Set body margin,padding, by default font family and font size */
+body {
+  font-size: $site_font_size;
+  color: $site_text_color;
+  font-family: $site_font;
+}
+
+.master_div{
+  width: 950px;
+  margin: 0px auto;
+}
+
+.page_heading_text {
+  text-transform: uppercase;
+  font-size: 30px;
+  text-shadow: $button_text_shadow;
+}
+
+.secondary_text {
+  font-size: $site_font_size_secondary;
+}
+
+input[type="text"], input[type="password"]{
+  border: $input_border;
+  padding: $input_padding;
+  height: $input_height;
+  width: $input_width;
+  color: $site_text_color;
+  font-size: $input_text_size;
+}
+
+input.field_with_errors, select.field_with_errors, textarea.field_with_errors {
+  border-color: $fail_text_color;
+  background-color: lighten($fail_text_color, 45);
+}
+
+input[type="checkbox"].field_with_errors {
+  outline: 1px solid $fail_text_color;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: $light_gray_0;
+  font-size: $input_placeholder_text_size;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: $light_gray_0;
+  font-size: $input_placeholder_text_size;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder{
+  color: $light_gray_0;
+  font-size: $input_placeholder_text_size;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: $light_gray_0;
+  font-size: $input_placeholder_text_size;
+}
+
+input[type="checkbox"] {
+  color: $site_text_color;
+}
+
+textarea {
+  color: $site_text_color;
+  border: $input_border;
+  padding: $input_padding;
+  width: $input_width;
+}
+
+select {
+  color: $site_text_color;
+  padding: $input_padding;
+  border: $input_border;
+  width: $input_width;
+  height: $input_height;
+  font-size: $input_text_size;
+  @include set_apperance;
+}
+
+button, input[type="submit"] {
+  text-shadow: $button_text_shadow;
+  color: $button_text_color;
+  font-family: $button_font;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 13px;
+  font-size: 18px;
+  font-weight: normal;
+  cursor: pointer;
+  border: 0px;
+  letter-spacing: 2px;
+  &:hover {
+    text-shadow: 0px -1px #000;
+  }
+}
+
+/* Set button style */
+button.active, input[type="submit"].active {
+  background: $button_dark_bg_color;
+  &:hover {
+    background: #0099ff;
+  }
+  &:active {
+    background: #0066ff;
+  }
+}
+
+button.dormant {
+  background: $button_light_bg_color;
+  &:hover {
+    background: $button_dark_bg_color;
+  }
+  &:active {
+    background: #0066ff;
+  }
+}
+
+button.disabled {
+  background: lighten($site_text_color, 20);
+  cursor: not-allowed;
+  &:hover {
+    text-shadow: $button_text_shadow;
+  }
+  &:active {}
+}
+
+.layover {
+  min-height: 200px;
+  width: 550px;
+  border: 1px solid #E4E4E4;
+  @include set_box_shadow(0px,2px,0px,#cccccc);
+  .heading {
+    background: $alert_box_header_bg_color;
+    text-transform: capitalize;
+    font-family: $site_font;
+    font-size: 16px;
+    padding: 10px;
+    button.close {
+      background: $button_dark_bg_color;
+      float: right;
+      line-height: 15px;
+      padding: 3px;
+      position: relative;
+      right: 1px;
+      top: -2px;
+      &:hover {
+        background: #FF0000;
+      }
+      &:active {
+        background: #FF0000;
+      }
+    }
+  }
+  .content {
+    padding: 20px;
+  }
+}
+
+.fail_alert {
+  @include alert_box($fail_text_color)
+}
+
+.warning_alert {
+  @include alert_box($warning_text_color)
+}
+
+.success_alert {
+  @include alert_box($success_text_color)
+}
+
+table {
+  font-size: 13px;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  font-family: $site_font;
+  color: $site_text_color;
+  tr:nth-child(odd) {
+    background: $light_gray_1;
+  }
+  tr:first-child {
+    font-size: 14px;
+    border-bottom: 1px solid $light_gray_0;
+    text-transform: capitalize;
+    background: lighten($light_gray_0, 16);
+  }
+  tr:nth-child(even) {
+    background: #FFFFFF;
+  }
+  td, th {
+    padding: 10px;
+  }
+}
+
+#reset_password input[type="text"]{
+  width:99%;
+  font-size: $input_placeholder_text_size;
+}

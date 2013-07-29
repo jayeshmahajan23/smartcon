@@ -1,0 +1,8 @@
+- if success.any? && success.length > 1
+  .success_alert.secondary_text
+    %ul
+      - success.each do |msg|
+        %li= msg
+- else
+  .success_alert.secondary_text
+    = success.first
