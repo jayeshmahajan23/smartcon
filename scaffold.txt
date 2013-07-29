@@ -33,7 +33,7 @@ rails generate model Payment amount_paid:float plan_id:integer quantity:integer 
 ===========
 rails generate controller Subscription  <<-- only to create controller
 rails generate scaffold_controller Subscription  <<-- to create controller and views
-rails generate model Subscription <<-- to create only controller
+rails generate model Subscription <<-- to create only model
 
 
 In contest table,

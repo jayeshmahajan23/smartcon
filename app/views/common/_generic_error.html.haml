@@ -1,0 +1,8 @@
+- if errors.any? && errors.length > 1
+  .fail_alert.secondary_text
+    %ul
+      - errors.each do |msg|
+        %li= msg
+- else
+  .fail_alert.secondary_text
+    = errors.first

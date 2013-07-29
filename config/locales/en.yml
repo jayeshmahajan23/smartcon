@@ -19,5 +19,33 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+# Refer https://github.com/rails/rails/blob/master/activemodel/lib/active_model/locale/en.yml
 en:
-  hello: "Hello world"
+  errors:
+    format: "%{message}"
+  activemodel:
+    errors:
+      messages:
+        valid_email: "Supplied e-mail address %{value} is not a valid e-mail"
+        alpha_numeric_only: "%{attribute} can have only alpha numeric characters (a to z or numbers)"
+        blank: "%{attribute} can't be blank"
+        too_short: "%{attribute} is blank or too short (minimum is %{count} characters)"
+        accepted: "Terms and conditions must be accepted"
+
+  default_page_title: 'Smart Twitter Contests'
+  default_page_description: 'Run Twitter Contests'
+  default_page_keywords: 'twitter, contest, socialmedia'
+  default_error_header: 'Please correct the following errors in the form below:'
+  generic_error_message: 'Oops.. we encoutered some problem. Please retry, and if problem persists, then please contact us'
+
+  #Signup page string
+  signup_page_description: 'Free Signup for running Twitter Contests'
+  signup_page_title: 'Free Signup'
+  existing_user: 'Existing user? Click here to login.'
+  ur_name: 'Your full name'
+  ur_email: 'Your e-mail'
+  ur_pswd: '6 to 12 characters long password'
+  ur_company: 'Your company name'
+  tnc_html: 'I accept these <a href="/tnc" target="_blank">terms and conditions<a/>.'
+  signup_button: 'Sign Up'
+  signup_success: "You have signed up successfully. We have also sent you a confirmation email at %{email}."
