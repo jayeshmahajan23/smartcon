@@ -33,4 +33,9 @@ class ApplicationController < ActionController::Base
     @_content_for[name].present?
   end
 
+  private
+    def current_user
+      @_current_user ||= session[:user][:id] && User.find(session[:user][:id])
+    end
+
 end

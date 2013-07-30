@@ -22,12 +22,17 @@
 # Refer https://github.com/rails/rails/blob/master/activemodel/lib/active_model/locale/en.yml
 en:
   errors:
-    format: "%{message}"
+    format: '%{message}'
   activemodel:
     errors:
+      models:
+        signup:
+          attributes:
+            email:
+              unique_email_html: '%{value} already exists in our database. If you are already registered, then please login else contact us to resolve the issue'
       messages:
-        valid_email: "Supplied e-mail address %{value} is not a valid e-mail"
-        alpha_numeric_only: "%{attribute} can have only alpha numeric characters (a to z or numbers)"
+        valid_email: 'Supplied e-mail address %{value} is not a valid e-mail'
+        alpha_numeric_only: '%{attribute} can have only alpha numeric characters (a to z or numbers)'
         blank: "%{attribute} can't be blank"
         too_short: "%{attribute} is blank or too short (minimum is %{count} characters)"
         accepted: "Terms and conditions must be accepted"
@@ -38,14 +43,28 @@ en:
   default_error_header: 'Please correct the following errors in the form below:'
   generic_error_message: 'Oops.. we encoutered some problem. Please retry, and if problem persists, then please contact us'
 
-  #Signup page string
+  # Signup page
   signup_page_description: 'Free Signup for running Twitter Contests'
   signup_page_title: 'Free Signup'
-  existing_user: 'Existing user? Click here to login.'
+  existing_user: 'Existing user? Click here to login'
   ur_name: 'Your full name'
   ur_email: 'Your e-mail'
   ur_pswd: '6 to 12 characters long password'
   ur_company: 'Your company name'
-  tnc_html: 'I accept these <a href="/tnc" target="_blank">terms and conditions<a/>.'
+  tnc_html: 'I accept these <a href="/tnc" target="_blank">terms and conditions<a/>'
   signup_button: 'Sign Up'
-  signup_success: "You have signed up successfully. We have also sent you a confirmation email at %{email}."
+  signup_success: 'You have signed up successfully. We have also sent you a confirmation email at %{email} for your reference'
+  login_now: 'Login Now'
+
+  # Login page
+  login_page_title: 'Login to your account'
+  login_page_description: 'Login to your account to run and manage your twitter contests'
+  new_user: 'New user? Click here to sign up'
+  forgot_password: 'Forgot password?'
+  login_button: 'Log In'
+  remember_me: 'Remember my e-mail'
+  inactive_account: 'Your account status is not active. Please contact us for any help'
+  invalid_login: 'Incorrect combination of e-mail and password'
+
+
+

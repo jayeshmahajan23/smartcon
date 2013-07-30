@@ -2,8 +2,11 @@ Smartcon::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   get 'signup' => 'signups#new'
-  # post 'signup' => 'signups#create'
-  post 'signup', :to=>"signups#create", :as=>"signups"
+  post 'signup', to: 'signups#create', as: 'signups'
+
+  get 'login' => 'logins#index'
+  post 'login', to: 'logins#dologin', as: 'logins'
+  get 'logout', to: 'logins#destroy'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

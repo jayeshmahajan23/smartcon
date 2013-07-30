@@ -4,6 +4,10 @@
     = yield :page_title
   - if flash[:success]
     = render "/common/generic_success", success: [flash[:success]]
+    %p
+      %a{href: "/login"}
+        %button.active
+          = t(:login_now)
   - else
     = form_for @signup do |f|
       - if @signup.errors.any?
@@ -22,7 +26,7 @@
         = f.password_field :password, placeholder: "#{t(:ur_pswd)}"
         %p
         = f.text_field :company, placeholder: "#{t(:ur_company)}"
-        %p.secondary_text
+        %p
           = f.check_box :terms_of_service
           %label{for: :signup_terms_of_service}
             %span.secondary_text= t(:tnc_html)

@@ -42,7 +42,8 @@ $input_padding: 0px 0px 0px 4px;
   color: $txt_color;
   background: lighten($txt_color, 42);
   border: 1px solid lighten($txt_color, 32);
-  display: inline-block
+  display: inline-block;
+  max-width: 75%
 }
 
 /* Set mixin for border radius */
@@ -106,6 +107,10 @@ body {
 
 .secondary_text {
   font-size: $site_font_size_secondary;
+}
+
+.site_text {
+  font-size: $site_font_size;
 }
 
 input[type="text"], input[type="password"]{
