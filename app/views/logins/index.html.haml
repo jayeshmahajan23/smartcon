@@ -1,26 +1,26 @@
 - content_for :page_description, t(:login_page_description)
 .master_div
-  .page_heading_text
-    = yield :page_title
-  = form_for @login do |f|
-    - if @login.errors.any?
-      = render "/common/error_message", target: @login
-    - elsif flash[:error]
-      = render "/common/generic_error", errors: [flash[:error]]
-    %div
-      %p
-      %a{:href => "/signup"}
-        %span.secondary_text= t(:new_user)
-      %p
-      = f.text_field :email, placeholder: "#{t(:ur_email)}"
-      %p
-      = f.password_field :password, placeholder: "#{t(:ur_pswd)}"
-      %p
-      = check_box_tag 'login[remember]', 1, (@login.remember == '1')
-      %label{for: 'login_remember'}
-        %span.secondary_text= t(:remember_me)
-      %p
-      = f.submit "#{t(:login_button)}", class: 'active'
-      %p
-      %a{:href => ""}
-        %span.secondary_text= t(:forgot_password)
+  .middle_login_box
+    .page_heading_text
+      = yield :page_title
+    = form_for @login do |f|
+      - if @login.errors.any?
+        = render "/common/error_message", target: @login
+      - elsif flash[:error]
+        = render "/common/generic_error", errors: [flash[:error]]
+      %div
+        %p
+          %span= t(:new_user_html)
+        %p
+          = f.text_field :email, placeholder: "#{t(:ur_email)}"
+        %p
+          = f.password_field :password, placeholder: "#{t(:ur_pswd)}"
+        %p
+          = check_box_tag 'login[remember]', 1, (@login.remember == '1')
+          %label{for: 'login_remember'}
+            %span.with_hand= t(:remember_me)
+        %p.right
+          = f.submit "#{t(:login_button)}", class: 'active'
+        %p.right
+          %a{:href => ""}
+            %span= t(:forgot_password)

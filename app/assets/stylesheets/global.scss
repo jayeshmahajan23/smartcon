@@ -8,7 +8,7 @@ $button_dark_bg_color: #00CCFF;
 $button_light_bg_color: #80E6FF;
 $button_text_color: #FFFFFF;
 $button_font: Century Gothic, Trebuchet MS, Helvetica;
-$button_text_shadow: 0px -1px #808080;
+$button_text_shadow: 0px -1px darken($button_dark_bg_color, 5);
 
 $light_gray_0: #C0C0C0;  /* Darkest Used for input filed border */
 $light_gray_1: #F2F2F2; /* Darker used for table header and hr line and box border, if any*/
@@ -32,8 +32,17 @@ $input_width: 300px;
 $input_height: 30px;
 $input_text_size: 14px;
 $input_placeholder_text_size: 13px;
-$input_border: 1px solid $light_gray_0;
-$input_padding: 0px 0px 0px 4px;
+$input_border: 2px solid $light_gray_1;
+$input_padding: .5em 1em;
+
+$body_color: #eaedf1;
+
+/* Set mixin for border radius */
+@mixin border_radius($radius: 2px) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
 
 /* Mixin for alert boxes*/
 @mixin alert_box($txt_color) {
@@ -43,14 +52,8 @@ $input_padding: 0px 0px 0px 4px;
   background: lighten($txt_color, 42);
   border: 1px solid lighten($txt_color, 32);
   display: inline-block;
-  max-width: 75%
-}
-
-/* Set mixin for border radius */
-@mixin border_radius($radius: 4px) {
-  border-radius: $radius;
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
+  max-width: 75%;
+  @include border_radius;
 }
 
 /* Set mixin for opacity style */
@@ -92,6 +95,12 @@ body {
   font-size: $site_font_size;
   color: $site_text_color;
   font-family: $site_font;
+  background: lighten($body_color, 4)
+}
+
+.with_hand {
+  cursor: pointer;
+  cursor: hand;
 }
 
 .master_div{
@@ -99,10 +108,26 @@ body {
   margin: 0px auto;
 }
 
+.middle_login_box {
+  margin: 0px auto;
+  width: 335px;
+  background: #FFFFFF;
+  padding: 2.5em;
+  border-radius: .2em;
+}
+
+.right {
+  text-align: right;
+}
+
+.full_width {
+  max-width: 100% !important;
+}
+
 .page_heading_text {
   text-transform: uppercase;
-  font-size: 30px;
-  text-shadow: $button_text_shadow;
+  font-size: 40px;
+  text-shadow: 0px -1px $light_gray_2;
 }
 
 .secondary_text {
@@ -120,6 +145,7 @@ input[type="text"], input[type="password"]{
   width: $input_width;
   color: $site_text_color;
   font-size: $input_text_size;
+  @include border_radius
 }
 
 input.field_with_errors, select.field_with_errors, textarea.field_with_errors {
@@ -160,6 +186,7 @@ textarea {
   border: $input_border;
   padding: $input_padding;
   width: $input_width;
+  @include border_radius;
 }
 
 select {
@@ -178,14 +205,16 @@ button, input[type="submit"] {
   font-family: $button_font;
   text-transform: capitalize;
   text-decoration: none;
-  padding: 13px;
-  font-size: 18px;
+  padding: 1em;
+  font-size: 16px;
   font-weight: normal;
   cursor: pointer;
   border: 0px;
   letter-spacing: 2px;
+  text-transform: uppercase;
+  @include border_radius;
   &:hover {
-    text-shadow: 0px -1px #000;
+    text-shadow: 0px -1px darken($button_dark_bg_color, 15);
   }
 }
 
@@ -223,6 +252,7 @@ button.disabled {
   min-height: 200px;
   width: 550px;
   border: 1px solid #E4E4E4;
+  @include border_radius;
   @include set_box_shadow(0px,2px,0px,#cccccc);
   .heading {
     background: $alert_box_header_bg_color;
