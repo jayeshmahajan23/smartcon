@@ -1,30 +1,34 @@
 - content_for :page_description, t(:signup_page_description)
 .master_div
-  .page_heading_text
-    = yield :page_title
-  - if flash[:success]
-    = render "/common/generic_success", success: [flash[:success]]
-  - else
-    = form_for @signup do |f|
-      - if @signup.errors.any?
-        = render "/common/error_message", target: @signup
-      - elsif flash[:error]
-        = render "/common/generic_error", errors: [flash[:error]]
-      %div
-        %p
-        %a{:href => "/login"}
-          %span.secondary_text= t(:existing_user)
-        %p
-        = f.text_field :name, placeholder: "#{t(:ur_name)}"
-        %p
-        = f.text_field :email, placeholder: "#{t(:ur_email)}"
-        %p
-        = f.password_field :password, placeholder: "#{t(:ur_pswd)}"
-        %p
-        = f.text_field :company, placeholder: "#{t(:ur_company)}"
-        %p.secondary_text
-          = f.check_box :terms_of_service
-          %label{for: :signup_terms_of_service}
-            %span.secondary_text= t(:tnc_html)
-        %p
-        = f.submit "#{t(:signup_button)}", class: 'active'
+  .middle_login_box
+    .page_heading_text
+      = yield :page_title
+    - if flash[:success]
+      = render "/common/generic_success", success: [flash[:success]]
+      %p
+        %a{href: "/login"}
+          %button.active
+            = t(:login_now)
+    - else
+      = form_for @signup do |f|
+        - if @signup.errors.any?
+          = render "/common/error_message", target: @signup
+        - elsif flash[:error]
+          = render "/common/generic_error", errors: [flash[:error]]
+        %div
+          %p
+            %span= t(:existing_user_html)
+          %p
+            = f.text_field :name, placeholder: "#{t(:ur_name)}"
+          %p
+            = f.text_field :email, placeholder: "#{t(:ur_email)}"
+          %p
+            = f.password_field :password, placeholder: "#{t(:ur_pswd)}"
+          %p
+            = f.text_field :company, placeholder: "#{t(:ur_company)}"
+          %p
+            = f.check_box :terms_of_service
+            %label{for: :signup_terms_of_service}
+              %span.with_hand= t(:tnc_html)
+          %p.right
+            = f.submit "#{t(:signup_button)}", class: 'active'

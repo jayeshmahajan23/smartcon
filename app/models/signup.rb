@@ -20,8 +20,8 @@ class Signup
     @persisted
   end
 
-  def save type = 'admin'
-    o = Organization.new(name: self.company)
+  def save utype = 'admin', otype = 'basic'
+    o = Organization.new name: self.company, otype: otype, ostatus: 'active'
     if o.valid? && o.save
       u = User.new(
         name: self.name,
@@ -29,11 +29,11 @@ class Signup
         email: self.email,
         organization_id: o.id,
         ustatus: 'active',
-        utype: type
+        utype: utype
       )
       if !u.unique_email?
-        errors.add(:email, 'E-mail address is not unique')
-      elsif u.valid? && u.save
+        errors.add :email, :unique_email_html
+      elsif u.valid? && u.register
         self.send_welcome_email self.email
         return true
       end

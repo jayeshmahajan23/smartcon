@@ -7,9 +7,9 @@ class SignupsController < ApplicationController
   def create
     @signup = Signup.new signup_params
     if @signup.valid? && @signup.save
-      flash[:success] = t(:signup_success, email: signup_params[:email])
+      flash.now[:success] = t(:signup_success, email: signup_params[:email])
     else
-      flash[:error] = t(:generic_error_message)
+      flash.now[:error] = t(:generic_error_message)
     end
     render action: :new
   end
