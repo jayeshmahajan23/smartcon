@@ -27,6 +27,8 @@
           %p
             = f.text_field :company, placeholder: "#{t(:ur_company)}"
           %p
+            = f.time_zone_select :time_zone, ActiveSupport::TimeZone.us_zones, :default => "Pacific Time (US & Canada)"
+          %p
             = f.check_box :terms_of_service
             %label{for: :signup_terms_of_service}
               %span.with_hand= t(:tnc_html)
