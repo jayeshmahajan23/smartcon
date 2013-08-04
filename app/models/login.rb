@@ -22,6 +22,4 @@ class Login
     @persisted
   end
 
-
-
 end
