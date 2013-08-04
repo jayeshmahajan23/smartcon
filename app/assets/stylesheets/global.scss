@@ -32,7 +32,7 @@ $input_width: 300px;
 $input_height: 30px;
 $input_text_size: 14px;
 $input_placeholder_text_size: 13px;
-$input_border: 2px solid $light_gray_1;
+$input_border: 2px solid lighten($light_gray_0, 10);
 $input_padding: .5em 1em;
 
 $body_color: #eaedf1;
@@ -95,7 +95,7 @@ body {
   font-size: $site_font_size;
   color: $site_text_color;
   font-family: $site_font;
-  background: lighten($body_color, 4)
+  background: lighten($body_color, 1)
 }
 
 .with_hand {

@@ -42,6 +42,9 @@ en:
   default_page_keywords: 'twitter, contest, socialmedia'
   default_error_header: 'Please correct the following errors in the form below:'
   generic_error_message: 'Oops.. we encoutered some problem. Please retry, and if problem persists, then please contact us'
+  must_login: 'You must be logged in to access this section'
+  subscription_expiration_warning_html: 'Your Subscription is expiring on %{date} <a href="/subscription">renew now</a>'
+  expired_subscription_flash_message_html: 'Your Subscription has expired on %{date}, <a href="/subscription">renew now</a>'
 
   # Signup page
   signup_page_description: 'Free Signup for running Twitter Contests'
@@ -65,6 +68,10 @@ en:
   remember_me: 'Remember my e-mail'
   inactive_account: 'Your account status is not active. Please contact us for any help'
   invalid_login: 'Incorrect combination of e-mail and password'
+
+  # Dashboard page
+  dashboard_page_title: 'Login'
+
 
 
 
