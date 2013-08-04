@@ -190,13 +190,14 @@ textarea {
 }
 
 select {
-  color: $site_text_color;
+  color: $light_gray_0;
   padding: $input_padding;
   border: $input_border;
-  width: $input_width;
-  height: $input_height;
+  width: 331px;
+  height: 50px;
   font-size: $input_text_size;
   @include set_apperance;
+  @include border_radius;
 }
 
 button, input[type="submit"] {

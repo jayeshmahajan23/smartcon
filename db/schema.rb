@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130718032017) do
+ActiveRecord::Schema.define(version: 20130804201706) do
 
   create_table "answers", force: true do |t|
     t.text     "answer",         limit: 255
@@ -245,6 +245,7 @@ ActiveRecord::Schema.define(version: 20130718032017) do
     t.integer  "organization_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "time_zone"
   end
 
   add_index "users", ["organization_id"], name: "index_users_on_organization_id"

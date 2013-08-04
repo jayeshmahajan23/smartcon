@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   validates :name, presence: true, alpha_numeric: true
+  validates :time_zone, presence: true
   validates :email, email_format: true
   validates :password, presence: true
   validates :organization_id, presence: true
