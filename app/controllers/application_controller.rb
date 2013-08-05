@@ -13,7 +13,6 @@ class ApplicationController < ActionController::Base
     (session[:user][:id] rescue nil) ? true : false
   end
 
-  #data should be hash
   def set_session_data key, value
     session[key] = value
   end

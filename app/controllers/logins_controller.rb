@@ -14,7 +14,7 @@ class LoginsController < ApplicationController
     user = @login.authenticate
     if user
       if user.ustatus == 'active' && user.organization.ostatus == 'active'
-        set_session_data :user, user.attributes.symbolize.only(:id, :name, :email, :utype, :ustatus)
+        set_session_data :user, user.attributes.symbolize.only(:id, :name, :email, :utype, :ustatus, :time_zone)
         set_session_data :organization, user.organization.attributes.symbolize.only(:id, :name, :otype, :organization_id)
         if login_params[:remember] == "1"
           cookies[:useremail] = { :value => login_params['email'], :expires => 2.years.from_now }

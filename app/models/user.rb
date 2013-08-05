@@ -1,11 +1,10 @@
 class User < ActiveRecord::Base
+  belongs_to :organization
   validates :name, presence: true, alpha_numeric: true
   validates :time_zone, presence: true
   validates :email, email_format: true
   validates :password, presence: true
   validates :organization_id, presence: true
-
-  belongs_to :organization
   before_save :lower_email
   before_update :lower_email
 
@@ -44,6 +43,5 @@ class User < ActiveRecord::Base
     def encrypt_password
       self.password = encrypt self.password.to_s if self.password
     end
-
 
 end
