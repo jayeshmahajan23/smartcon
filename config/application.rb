@@ -25,5 +25,8 @@ module Smartcon
       g.template_engine :haml
       g.assets false
     end
+
+    # http://rubysource.com/get-your-app-ready-for-rails-4/
+    config.autoload_paths += Dir["#{config.root}/lib"]
   end
 end
