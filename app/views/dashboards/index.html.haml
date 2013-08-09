@@ -1,2 +1,9 @@
-- if @expiration_msg
-  =@expiration_msg
+-if @org.subscription_expires_at
+  -diff = @org.subscription_expires_at.to_time - Time.now
+  -if diff.between?(1.days,8.days)
+    -expiration_msg = t(:subscription_expiration_warning_html, date: sc_date_with_time(@org.subscription_expires_at) )
+  -elsif diff.between?(1,1.days)
+    -expiration_msg = t(:subscription_expiration_warning_today_html)
+  -else
+    -expiration_msg = t(:expired_subscription_flash_message_html, date: sc_date_with_time(@org.subscription_expires_at) )
+  =expiration_msg
