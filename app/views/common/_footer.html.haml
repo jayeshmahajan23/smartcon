@@ -1,2 +1,7 @@
 %hr
 I am footer
+%p
+=session[:user]
+%p
+-if session[:user]
+  %a{href: '/logout'} Logout

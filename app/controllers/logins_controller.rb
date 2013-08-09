@@ -30,7 +30,11 @@ class LoginsController < ApplicationController
       flash.now[:error] = t(:invalid_login)
     end
     render action: :index
+  end
 
+  def destroy
+    reset_session
+    redirect_to '/login'
   end
 
   private

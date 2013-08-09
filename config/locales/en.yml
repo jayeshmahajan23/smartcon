@@ -79,7 +79,7 @@ en:
   invalid_login: 'Incorrect combination of e-mail and password'
 
   # Dashboard page
-  dashboard_page_title: 'Login'
+  dashboard_page_title: 'Dashboard'
 
 
 
