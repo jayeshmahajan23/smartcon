@@ -22,6 +22,7 @@ class LoginsController < ApplicationController
           cookies.delete :useremail
         end
         user.update_login_records request.remote_ip
+        record(ltype: Log::TYPES[:login])
         redirect_to '/dashboard' and return
       else
         flash.now[:error] = t(:inactive_account)
