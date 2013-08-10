@@ -38,6 +38,15 @@ class ApplicationController < ActionController::Base
     @_content_for[name].present?
   end
 
+  # Better to at least pass ltype, some_id, detail
+  def record data
+    default = { user_id: nil, ip_address: request.remote_ip,
+      some_id: nil, ltype: nil, detail: nil }
+    default[:user_id] = session[:user][:id] if session[:user][:id] && !default[:user_id]
+    data = default.merge(data)
+    Log.new(data).save
+  end
+
   private
     def require_login
       unless logged_in?
