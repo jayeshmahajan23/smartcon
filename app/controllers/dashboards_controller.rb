@@ -3,6 +3,7 @@ class DashboardsController < ApplicationController
   # GET /dashboards
   def index
     @org = Organization.find_by id: session[:organization][:id]
+    @exp_date = @org.subscription_expires_at ? sc_date_with_time(@org.subscription_expires_at) : nil
   end
 
   private
